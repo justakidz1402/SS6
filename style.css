@@ -1,0 +1,9 @@
+.listItem{
+    display: flex;
+    padding: 2px;
+    margin: 5px;
+}
+
+.listItem button{
+    margin-left: 5px;
+}
