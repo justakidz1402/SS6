@@ -39,7 +39,7 @@ function render() {
     let id = index;
     return `
             <div class = "listItem">
-                <li>${index}. ${item} <button class = "del" onclick = 'delete1(${id})'>${"X"}</button></li>               
+                <li>${index + 1}. ${item} <button class = "del" onclick = 'delete1(${id})'>${"X"}</button></li>               
             </div>
         `;
   });
