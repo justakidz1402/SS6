@@ -26,22 +26,20 @@ function addItem() {
   input.value = ""; //clear input value
 }
 
-for (let i = 0; i < $btnDel.length; i++) {
-    $btnDel[i].addEventListener("click", () => {
-        let removeItem = $btnDel.value;
-        list.remove(removeItem);
-        console.log(removeItem);
-        render();
-        localStorage.removeItem(localStorageKey, JSON.stringify(list));
-    });
+function delete1(id){
+  let removed = list.splice(id, 1);
+  console.log(removed);
+  localStorage.removeItem(removed);
+  localStorage.setItem(localStorageKey, JSON.stringify(list));
+  render();
 }
 
-
 function render() {
-  let html = list.map((item) => {
+  let html = list.map((item, index) => {
+    let id = index;
     return `
             <div class = "listItem">
-                <li>${item} <button class = "del">${"X"}</button></li>               
+                <li>${index}. ${item} <button class = "del" onclick = 'delete1(${id})'>${"X"}</button></li>               
             </div>
         `;
   });
