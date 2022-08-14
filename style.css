@@ -27,6 +27,11 @@
     margin-left: 4px;
 }
 
+.listItem button:hover{
+    color: white;
+    background-color: rgb(255, 88, 88);
+}
+
 .bai1 h1{
     margin-bottom: 10px;
     color: rgb(84, 175, 255);
